@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>にげまくりまっし！！！ - 防災クイズ＆ゲーム</title>
+    <link rel="stylesheet" href="kuizugame9.css"> 
+    <script src="kuizugame99.js" defer></script>
+</head>
+<body>
+
+    <div class="lightning"></div>
+    <div class="city"></div>
+    <div class="ocean"></div>
+
+    <div id="top-screen" class="full-screen-ui">
+        <h1>にげまくりまっし！！！</h1>
+        <p>あなたの防災知識はどのくらい？</p>
+        <button id="start-button" class="action-button primary-button">スタート</button>
+    </div>
+
+    <div id="selection-screen" class="full-screen-ui hidden">
+        <h2>２つのモードがあるよ</h2>
+        <p>どっちで遊ぶ？</p>
+        <div class="selection-buttons-group">
+            <button id="mode-quiz-button" class="action-button mode-button">クイズモード</button>
+            <button id="mode-game-button" class="action-button mode-button">ゲームモード</button>
+        </div>
+        <button id="back-to-selection-top-button" class="navigation-button back-to-home-style">ホームに戻る</button>
+    </div>
+
+    <div id="quiz-mode-container" class="full-screen-ui hidden">
+        <button id="back-from-quiz-mode-button" class="navigation-button back-button game-back-button">選択画面に戻る</button>
+
+        <div id="quiz-start-screen" class="quiz-screen">
+            <h1>防災 4択クイズへようこそ！</h1>
+            <p>全<span id="total-questions-start">10</span>問のクイズにチャレンジしよう！</p>
+            <button id="start-quiz-button" class="action-button primary-button">クイズ スタート</button>
+        </div>
+
+        <div id="quiz-container" class="quiz-screen hidden">
+            <img id="quiz-image" src="" alt="クイズに関連する画像" class="quiz-visual hidden"> 
+            
+            <h2 id="question">第X問：〇〇とは？</h2>
+            
+            <div id="choices-container" class="button-group">
+                </div>
+            
+            <p id="result-message" class="feedback-box"></p>
+
+            <div class="score-area">
+                <p>スコア: <span id="score-display">0</span> / <span id="total-questions">10</span></p>
+            </div>
+            
+            <div id="next-button-container"></div>
+        </div>
+        
+        <div id="quiz-result-screen" class="quiz-screen hidden">
+            <h2>結果発表！</h2>
+            <p>あなたのスコアは <span id="final-score">X</span> / <span id="final-total">Y</span> 点でした！</p>
+            <p id="rank-message">評価に応じてメッセージが変わります。</p>
+            <button id="back-to-mode-selection-button" class="navigation-button back-to-home-style">モード選択に戻る</button>
+            <button id="retry-quiz-button" class="action-button primary-button">もう一度チャレンジ</button>
+            <button id="quit-game-button" class="action-button">ゲームをやめる (防災情報へ)</button>
+        </div>
+    </div>
+
+
+    <div id="game-container" class="full-screen-ui hidden">
+        <button id="back-from-game-button" class="navigation-button back-button game-back-button">選択画面に戻る</button>
+        <h3>ゲームモード（未実装）</h3>
+        <p>ここはゲームモードのエリアです。</p>
+    </div>
+
+    <button id="back-to-top-button" class="navigation-button back-button hidden">タイトルに戻る</button> 
+    
+</body>
+</html>
